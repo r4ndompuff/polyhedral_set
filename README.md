@@ -32,4 +32,5 @@ Getting extreme points for polyhedral set H = {x in R^n: w^(T)x>=-b} and other t
 # Typical errors
 1) If you use python3, then try to use python 2.7. <br/>
 2) If you want to you use python 3, then if you have numpy error, then download in manually (or use python 2.7 instead). <br/>
-3) If you have "ImportError: No module named polyhedron". Then use 'lin.polyhedron' instead of 'polyhedron' in import.
+3) If you have "ImportError: No module named polyhedron". Then use 'lin.polyhedron' instead of 'polyhedron' in import. (This is because you use python 3 or install python 3, when you already had the best python 2)
+4) If you have any more problems. Contact me: r4nd0m1999@gmail.com.
