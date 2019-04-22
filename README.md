@@ -15,16 +15,13 @@ or
 
 # Input type
 
-    extreme_points(m,n,A,b,c)
+    extreme_points(A, b, c)
     
 Where
 
-* m - integer of how many raws in A (and b)
-* n - integer of how many x's (columns) in A
-* A - matrix of coefficients
-* b - vector of free coefficients on the right side (check 
-  Description)
-* c - string of inequality (or equality) signs 
+* A - m×n matrix of coefficients
+* b - 1×m row vector of free coefficients on the right side
+* c - string of inequality (or equality) signs
 
 # How to use it
 
@@ -32,10 +29,14 @@ Where
 
 Example:
 
-    A = [[1,0,0],[1,-1,1],[1,-2,0],[0,1,0],[0,0,1]]
-    b = [0,1,4,0,0]
+    A = [[1,  0, 0],
+         [1, -1, 1],
+         [1, -2, 0],
+         [0,  1, 0],
+         [0,  0, 1]]
+    b = [0, 1, 4, 0, 0]
     c = '[>=,<=,<=,>=,>=]'
-    ans = ph.extreme_points(5,3,A,b,c)
+    ans = ph.extreme_points(A, b, c)
     print(ans)
 
 # Description / Описание
