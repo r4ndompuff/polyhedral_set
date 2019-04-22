@@ -26,7 +26,7 @@ def check_extreme(matr, arr, x, sym_comb, m):
     sym_comb = sym_comb.replace(']', '')
     sym_comb = sym_comb.replace('[', '')
     sym_comb = re.split("[ ,]", sym_comb)
-    for i in range(m):
+    for i in range(int(m)):
         td_answer = sum(matr[i] * x)
         if sym_comb[i] == '>':
             if td_answer <= arr[i]:
@@ -61,7 +61,7 @@ def extreme_points(m, n, A, b, sym_comb):
     matr_comb = matrix_combinations(A, n)
     for i in range(int(permutation(n, m))):
         if np.linalg.det(matr_comb[i]) != 0:
-            x = np.linalg.solve(matr_comb[i], arr_comb[i])
+            x = np.linalg.solve(np.array(matr_comb[i], dtype='float'), np.array(arr_comb[i], dtype='float'))
             ans_comb = np.vstack([ans_comb, x])
     ans_comb = np.delete(ans_comb, 0, axis=0)
     j = 0
