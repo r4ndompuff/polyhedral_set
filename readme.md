@@ -15,7 +15,7 @@ or
 
 # Input type
 
-    extreme_points(m,n,A,b,c)
+    check_extreme(m,n,A,b,c)
     
 Where
 
