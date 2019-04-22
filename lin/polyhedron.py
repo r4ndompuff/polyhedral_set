@@ -51,10 +51,11 @@ def check_extreme(matr, arr, x, sym_comb, m):
     return 1
 
 
-def extreme_points(m, n, A, b, sym_comb):
+def extreme_points(A, b, sym_comb):
     # Input
-    A = np.array(A).reshape(m, n)
-    b = np.array(b).reshape(m, 1)
+    A = np.array(A)
+    b = np.array(b)
+    m, n = A.shape
     # Process
     ans_comb = np.zeros((1, n))
     arr_comb = array_combinations(b, n)

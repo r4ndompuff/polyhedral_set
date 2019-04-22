@@ -13,5 +13,5 @@ def test():
     expected = [[0, 0, 1],
                 [0, 0, 0],
                 [1, 0, 0]]
-    ans = extreme_points(5, 3, A, b, c)
+    ans = extreme_points(A, b, c)
     assert np.allclose(ans, expected, atol=1e-12, rtol=0)
