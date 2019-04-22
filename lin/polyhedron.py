@@ -1,24 +1,20 @@
 import numpy as np
 import itertools as it
-import math
+from math import factorial
 import re
 
 
 def permutation(m, n):
-    return math.factorial(n) / (math.factorial(n - m) * math.factorial(m))
+    return factorial(n) / (factorial(n - m) * factorial(m))
 
 
 def matrix_combinations(matr, n):
     timed = list(map(list, it.combinations(matr, n)))
-    for i in range(n):
-        timed[i][i][i] = np.asscalar(timed[i][i][i])
     return np.array(list(timed))
 
 
 def array_combinations(arr, n):
     timed = list(map(list, it.combinations(arr, n)))
-    for i in range(n):
-        timed[i][i] = np.asscalar(timed[i][i])
     return np.array(list(timed))
 
 
@@ -62,14 +58,15 @@ def extreme_points(A, b, sym_comb):
     matr_comb = matrix_combinations(A, n)
     for i in range(int(permutation(n, m))):
         if np.linalg.det(matr_comb[i]) != 0:
-            x = np.linalg.solve(np.array(matr_comb[i], dtype='float'), np.array(arr_comb[i], dtype='float'))
+            x = np.linalg.solve(np.array(matr_comb[i], dtype='float'),
+                                np.array(arr_comb[i], dtype='float'))
             ans_comb = np.vstack([ans_comb, x])
     ans_comb = np.delete(ans_comb, 0, axis=0)
     j = 0
     for i in range(len(ans_comb)):
         if check_extreme(A, b, ans_comb[j], sym_comb, m):
             ans_comb = ans_comb
-            j = j + 1
+            j += 1
         else:
             ans_comb = np.delete(ans_comb, j, axis=0)
     # Output
