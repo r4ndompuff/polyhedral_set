@@ -25,7 +25,7 @@ Where
 
 # How to use it
 
-    import polyhedron as ph
+    import lin.polyhedron as ph
 
 Example:
 
@@ -50,5 +50,5 @@ types such as U = {u in R^n|Au=b, u>=0}
 # Typical errors
 
 1) If you have `ImportError: No module named polyhedron`. Then use 
-   `lin.polyhedron` instead of `polyhedron` in import.
+   `polyhedron` instead of `lin.polyhedron` in import.
 2) If you have any more problems, contact me: r4nd0m1999@gmail.com.
