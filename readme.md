@@ -3,7 +3,7 @@ This is a program for finding extreme points of polyhedral set. //
 Программа для поиска крайних точек канонического многогранника.
 
 # Used libraries
-numpy (ver. 1.15.4), itertools, math, re
+numpy, itertools, math, re
 
 # How to install
 
@@ -36,6 +36,7 @@ Example:
     b = [0,1,4,0,0]
     c = '[>=,<=,<=,>=,>=]'
     ans = ph.extreme_points(5,3,A,b,c)
+    print(ans)
 
 # Description / Описание
 
