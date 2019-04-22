@@ -15,7 +15,7 @@ or
 
 # Input type
 
-    check_extreme(m,n,A,b,c)
+    extreme_points(m,n,A,b,c)
     
 Where
 
@@ -35,7 +35,7 @@ Example:
     A = [[1,0,0],[1,-1,1],[1,-2,0],[0,1,0],[0,0,1]]
     b = [0,1,4,0,0]
     c = '[>=,<=,<=,>=,>=]'
-    ans = ph.check_extreme(5,3,A,b,c)
+    ans = ph.extreme_points(5,3,A,b,c)
 
 # Description / Описание
 
